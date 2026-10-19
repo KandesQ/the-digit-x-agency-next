@@ -2,6 +2,8 @@
 
 :root {
   --background: #ffffff;
+  --primary-color: #00C8FF;
+  --border-color: rgba(25, 35, 42, 0.6); 
   --foreground: black;
 }
 
@@ -21,6 +23,27 @@
 body {
   background: var(--background);
   color: #9AA7B0;
+  margin-bottom: 10000000px;
+}
+
+@keyframes slide-up
+{
+  from
+  {
+    opacity: 0;
+    transform: translateY(24px);
+  }  
+
+  to
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up
+{
+  animation: .8s cubic-bezier(.4, 0, .2, 1) both slide-up;
 }
 
 
@@ -29,5 +52,5 @@ body {
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
-  padding: 0 22px;
+  padding: 0 20px;
 }
