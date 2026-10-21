@@ -1,20 +1,24 @@
+"use client"
+
 import Image from "next/image";
 
 import star from "@/public/Star.svg"
+import Increment from "../common-components/animated/Increment";
 
 type Advantage = {
     id: number;
-    numbers: string;
+    number: number;
+    postfix: string;
     desc: string;
 }
 
 export default function Hero()
 {
     const advantages: Advantage[] = [
-        {id: 1, numbers: "150+", desc: "Projects Delivered"},
-        {id: 2, numbers: "80+", desc: "Happy Clients"},
-        {id: 3, numbers: "5M+", desc: "Reach Generated"},
-        {id: 4, numbers: "98%", desc: "Client Retention"}
+        {id: 1, number: 150, postfix: "+", desc: "Projects Delivered"},
+        {id: 2, number: 80, postfix: "+", desc: "Happy Clients"},
+        {id: 3, number: 5, postfix: "M+",desc: "Reach Generated"},
+        {id: 4, number: 98, postfix: "%", desc: "Client Retention"}
     ]
 
     return (
@@ -65,7 +69,10 @@ export default function Hero()
                     <div className="mt-[80] grid grid-cols-4 w-full max-md:grid-cols-2 items-stretch gap-[24] text-center">
                         {advantages.map(advantage => (
                             <div key={advantage.id} className="p-6 border rounded-[16] border-[var(--border-color)] hover:border-[var(--primary-color)]/60 hover:-translate-y-1 transition-all">
-                                <div className="bg-clip-text text-transparent bg-gradient-to-r from-[#00C8FF] to-[#6FEAFF] font-bold text-4xl max-sm:text-3xl">{advantage.numbers}</div>
+                                <div className="bg-clip-text text-transparent bg-gradient-to-r from-[#00C8FF] to-[#6FEAFF] font-bold text-4xl max-sm:text-3xl">
+                                    <Increment value={advantage.number} duration={1500} />{advantage.postfix}
+                                </div>
+
                                 <div className="mt-1 text-sm font-normal max-sm:text-xs">{advantage.desc}</div>
                             </div>  
                         ))}
