@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link";
 
 import logo from "@/public/Logo.svg"
-import burger from "@/public/Burger.svg"
+import burger from "@/public/header/Burger.svg"
 
 import { useEffect, useState } from "react";
 
