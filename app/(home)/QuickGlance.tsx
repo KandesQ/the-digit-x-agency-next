@@ -12,7 +12,7 @@ export default function QuickGlance() {
           height="20"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="var(--primary-color)"
+          stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -34,7 +34,7 @@ export default function QuickGlance() {
           height="20"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="var(--primary-color)"
+          stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -58,7 +58,7 @@ export default function QuickGlance() {
           height="20"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="var(--primary-color)"
+          stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -83,7 +83,7 @@ export default function QuickGlance() {
           height="20"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="var(--primary-color)"
+          stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -129,9 +129,13 @@ export default function QuickGlance() {
 
         <ul className="grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-[16]">
           {bulletsInfo.map((bulletInfo) => (
-            <li className="flex flex-col p-[21] border rounded-[16] gap-[13] border-[var(--border-color)]" key={bulletInfo.id}>
+            <li
+              className="group flex flex-col p-[21] border rounded-[16] gap-[13] border-[var(--border-color)] hover:border-[var(--primary-color)]/60 hover:-translate-y-1 transition-all"
+              key={bulletInfo.id}
+            >
               <div className="flex items-center gap-[12]">
-                <div className="p-[10] bg-[var(--primary-color)]/10 rounded-[12]">
+                
+                <div className="p-[10] text-[var(--primary-color)] bg-[var(--primary-color)]/10 rounded-[12] group-hover:bg-[var(--primary-color)] group-hover:text-black transition-all">
                   {bulletInfo.icon}
                 </div>
 
@@ -140,7 +144,9 @@ export default function QuickGlance() {
                 </h3>
               </div>
 
-              <p className="text-xs leading-[19.5px]">{bulletInfo.description}</p>
+              <p className="text-xs leading-[19.5px]">
+                {bulletInfo.description}
+              </p>
             </li>
           ))}
         </ul>
