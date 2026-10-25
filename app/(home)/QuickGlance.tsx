@@ -97,7 +97,7 @@ export default function QuickGlance() {
   ];
 
   return (
-    <section className="pt-[80]">
+    <section className="py-[80]">
       <div className="flex flex-col gap-[40] quick-glance__container">
         <div className="flex flex-col items-center gap-[12]">
           <div className="flex items-center gap-[8]">
