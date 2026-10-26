@@ -1,6 +1,7 @@
 import Hero from "./(home)/Hero";
 import OurProcess from "./(home)/OurProcess";
 import QuickGlance from "./(home)/QuickGlance";
+import WhatWeDo from "./(home)/WhatWeDo";
 import WhyUs from "./(home)/WhyUs";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <QuickGlance />
         <WhyUs />
         <OurProcess />
+        <WhatWeDo />
       </main>
     </div>
   );
