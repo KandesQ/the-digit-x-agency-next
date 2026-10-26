@@ -1,3 +1,4 @@
+import FAQs from "./(home)/FAQs";
 import Hero from "./(home)/Hero";
 import OurProcess from "./(home)/OurProcess";
 import QuickGlance from "./(home)/QuickGlance";
@@ -13,6 +14,7 @@ export default function Home() {
         <WhyUs />
         <OurProcess />
         <WhatWeDo />
+        <FAQs />
       </main>
     </div>
   );
