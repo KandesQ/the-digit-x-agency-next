@@ -23,19 +23,9 @@
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  letter-spacing: -0.02rem;
-}
-
 body {
   background: var(--background);
   color: #9aa7b0;
-  margin-bottom: 10000000px;
 }
 
 @keyframes slide-up {
@@ -87,9 +77,6 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
-
-.from-card {
 }
 
 [class$="__container"] {
