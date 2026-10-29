@@ -1,3 +1,4 @@
+import CardAction from "./(home)/CardAction";
 import FAQs from "./(home)/FAQs";
 import Hero from "./(home)/Hero";
 import OurProcess from "./(home)/OurProcess";
@@ -15,6 +16,7 @@ export default function Home() {
         <OurProcess />
         <WhatWeDo />
         <FAQs />
+        <CardAction />
       </main>
     </div>
   );

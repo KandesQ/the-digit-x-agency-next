@@ -7,6 +7,7 @@
   --border-color: rgba(25, 35, 42, 0.6);
   --foreground: black;
   --shadow-glow: 0 0 40px rgba(0, 200, 255, 0.45);
+  --card-action: lab(1.20313% -0.448897 -1.28115);
 }
 
 @theme inline {
@@ -20,6 +21,15 @@
     --background: black;
     --foreground: #ededed;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.02rem;
 }
 
 body {
@@ -63,11 +73,23 @@ body {
   box-shadow: var(--shadow-glow);
 }
 
+@utility glow-effect-lg {
+  box-shadow: 0 0 80px lab(74.7757% -26.5445 -44.3965 / 0.55);
+  transition-property: all;
+  transition-timing-function: var(
+    --default-transition-timing-function
+  ); /* cubic-bezier(0.4, 0, 0.2, 1) */
+  transition-duration: var(--default-transition-duration);
+}
+
 .text-gradient {
-  background: linear-gradient(to right, #00C8FF, #6FEAFF);
+  background: linear-gradient(to right, #00c8ff, #6feaff);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.from-card {
 }
 
 [class$="__container"] {
