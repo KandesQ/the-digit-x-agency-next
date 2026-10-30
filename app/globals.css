@@ -79,6 +79,10 @@ body {
   color: transparent;
 }
 
+.padding-from-header {
+  padding-top: 65px;
+}
+
 [class$="__container"] {
   width: 100%;
   max-width: 1320px;
