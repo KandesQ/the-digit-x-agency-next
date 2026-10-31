@@ -8,6 +8,7 @@
   --foreground: black;
   --shadow-glow: 0 0 40px rgba(0, 200, 255, 0.45);
   --card-action: lab(1.20313% -0.448897 -1.28115);
+  --electric-glow: lab(83.1161% -28.5585 -36.2341);
 }
 
 @theme inline {
@@ -71,6 +72,7 @@ body {
   ); /* cubic-bezier(0.4, 0, 0.2, 1) */
   transition-duration: var(--default-transition-duration);
 }
+
 
 .text-gradient {
   background: linear-gradient(to right, #00c8ff, #6feaff);
