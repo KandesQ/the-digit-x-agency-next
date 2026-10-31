@@ -1,3 +1,4 @@
+import CardAction from "./CardAction";
 import Hero from "./Hero";
 import OurStory from "./OurStory";
 import OurTeam from "./OurTeam";
@@ -8,6 +9,7 @@ export default function About() {
       <Hero />
       <OurStory />
       <OurTeam />
+      <CardAction />
     </main>
   );
 }
