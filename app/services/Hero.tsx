@@ -9,19 +9,21 @@ export default function Hero() {
         <div className="absolute size-[112] bottom-[14%] right-[18%] max-sm:size-[96] rounded-3xl bg-gradient-to-br from-[var(--primary-color)]/30 to-transparent blur-md animate-floating" />
       </div>
 
-      <div className="flex flex-col items-center text-center slide-up hero__container">
-        <span className="uppercase font-semibold text-xs leading-[16px] tracking-[2.4px] text-[var(--primary-color)]">
-          Our Services
-        </span>
+      <div className="flex flex-col items-center text-center hero__container">
+        <div className="flex flex-col reveal">
+          <span className="uppercase font-semibold text-xs leading-[16px] tracking-[2.4px] text-[var(--primary-color)]">
+            Our Services
+          </span>
 
-        <h2 className="mt-[18] text-white font-bold text-6xl leading-[63px] tracking-[-1.2px] max-sm:text-4xl">
-          Our <span className="text-gradient">Services</span>
-        </h2>
+          <h2 className="mt-[18] text-white font-bold text-6xl leading-[63px] tracking-[-1.2px] max-sm:text-4xl">
+            Our <span className="text-gradient">Services</span>
+          </h2>
 
-        <p className="mt-[26] leading-[29.3px] text-lg max-w-[818]">
-          From strategy to launch, every service is built around one goal:
-          helping your business grow.
-        </p>
+          <p className="mt-[26] leading-[29.3px] text-lg max-w-[818]">
+            From strategy to launch, every service is built around one goal:
+            helping your business grow.
+          </p>
+        </div>
       </div>
     </section>
   );
