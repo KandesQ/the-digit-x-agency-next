@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="absolute size-[112] bottom-[14%] right-[18%] max-sm:size-[96] rounded-3xl bg-gradient-to-br from-[var(--primary-color)]/30 to-transparent blur-md animate-floating" />
       </div>
 
-      <div className="flex flex-col items-center text-center hero__container">
+      <div className="flex flex-col items-center text-center slide-up hero__container">
         <span className="uppercase font-semibold text-xs leading-[16px] tracking-[2.4px] text-[var(--primary-color)]">
           Our Services
         </span>
