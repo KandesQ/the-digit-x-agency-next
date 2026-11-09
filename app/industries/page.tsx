@@ -1,4 +1,5 @@
 import Brands from "./Brands/Brands";
+import CardAction from "./CardAction";
 import Hero from "./Hero";
 
 export default function IndustriesPage() {
@@ -6,6 +7,7 @@ export default function IndustriesPage() {
         <main className="padding-from-header">
             <Hero />
             <Brands />
+            <CardAction />
         </main>
     )
 }
