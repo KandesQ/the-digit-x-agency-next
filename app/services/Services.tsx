@@ -1,8 +1,5 @@
-"use client";
-
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 type Service = {
   id: number;
@@ -317,40 +314,6 @@ export default function Services() {
       ),
     },
   ];
-
-  const pathName = usePathname();
-
-  useEffect(() => {
-    const revealingElements = document.querySelectorAll(
-      ".reveal:not(.reveal-in)",
-    );
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("reveal-in");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.15,
-        rootMargin: "0px 0px -60px 0px",
-      },
-    );
-
-    revealingElements.forEach((el) => observer.observe(el));
-
-    return () => {
-
-        revealingElements.forEach(el => {
-            el.classList.remove("reveal-in")
-        })
-
-      observer.disconnect();
-    };
-  }, [pathName]);
 
   return (
     <section className="pb-[80px]">
