@@ -21,7 +21,7 @@ export default function Header()
         {id: 2, pageLink: "/about", title: "About"},
         {id: 3, pageLink: "/services", title: "Services"},
         {id: 4, pageLink: "/industries", title: "Industries"},
-        {id: 5, pageLink: "/portfolio", title: "Packages"},
+        {id: 5, pageLink: "/packages", title: "Packages"},
         {id: 6, pageLink: "/testimonials", title: "Testimonials"},
         {id: 7, pageLink: "/contact", title: "Contact"}
     ]
