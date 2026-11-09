@@ -2,7 +2,7 @@ import { brands } from "./brands.data";
 
 export default function Brands() {
   return (
-    <section>
+    <section className="pb-[96px]">
       <div className="flex flex-col items-center brands__container">
         <h2 className="font-bold text-center text-white text-4xl tracking-[-0.72px] max-sm:text-3xl">
           Brands We Have <span className="text-gradient">Helped Grow</span>
