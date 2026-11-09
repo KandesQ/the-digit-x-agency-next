@@ -2,7 +2,7 @@
 
 import Hero from "./Hero";
 import CardAction from "@/app/services/CardAction";
-import Services from "./Services";
+import Services from "./Services/Services";
 
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
