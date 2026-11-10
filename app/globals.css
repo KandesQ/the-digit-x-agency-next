@@ -62,6 +62,22 @@ body {
   animation: animate-floating 6s ease-in-out infinite;
 }
 
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0;
+    scale: 0.95;
+  }
+
+  50% {
+    opacity: 1;
+    scale: 1.2;
+  }
+}
+
+.animate-glow-pulse {
+  animation: 5s ease-in-out infinite glow-pulse;
+}
+
 .glow-effect {
   box-shadow: var(--shadow-glow);
 }
