@@ -1,5 +1,6 @@
 import CardAction from "../common-components/CardAction";
 import Hero from "./Hero";
+import Testimonials from "./Testimonials";
 
 export default function TestimonialsPage() {
   return (
@@ -11,6 +12,8 @@ export default function TestimonialsPage() {
       </div>
 
       <Hero />
+
+      <Testimonials />
 
       <CardAction
         title="Ready to join them?"

@@ -8,6 +8,7 @@
   --foreground: black;
   --shadow-glow: 0 0 40px rgba(0, 200, 255, 0.45);
   --card-action: lab(1.20313% -0.448897 -1.28115);
+  --card-color: lab(1.20313% -0.448897 -1.28115);
   --electric-glow: lab(83.1161% -28.5585 -36.2341);
 
   --leading-relaxed: 1.625;
