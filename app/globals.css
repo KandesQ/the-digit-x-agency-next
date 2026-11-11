@@ -12,6 +12,7 @@
   --electric-glow: lab(83.1161% -28.5585 -36.2341);
 
   --leading-relaxed: 1.625;
+  --leading-tight: 1.25;
 }
 
 @theme inline {
