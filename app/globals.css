@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --backgroud-color: rgba(2, 3, 3, 0.4);
+  --text-color: #9aa7b0;
+  --muted-text-color: lab(67.5467% -3.17603 -6.54715);
   --primary-color: #00c8ff;
   --border-color: rgba(25, 35, 42, 0.6);
   --foreground: black;
@@ -10,6 +12,7 @@
   --card-action: lab(1.20313% -0.448897 -1.28115);
   --card-color: lab(1.20313% -0.448897 -1.28115);
   --electric-glow: lab(83.1161% -28.5585 -36.2341);
+  --input-color: #09131A;
 
   --leading-relaxed: 1.625;
   --leading-tight: 1.25;
