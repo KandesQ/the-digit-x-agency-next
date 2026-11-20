@@ -66,7 +66,7 @@ function CompanyInfo() {
 
       <div className="mt-[24] flex gap-[12]">
         <Link
-          href="https://wa.me/918248116779"
+          href="https://www.instagram.com/digit.x._?igsh=MXI5NDlhMWcxZHJrdw=="
           className="text-white p-[12] rounded-full transition-all border border-[var(--border-color)] hover:text-[var(--primary-color)] hover:border-[var(--primary-color)]"
         >
           <svg
@@ -89,7 +89,7 @@ function CompanyInfo() {
 
         <Link
           className="text-white p-[12] rounded-full transition-all border border-[var(--border-color)] hover:text-[var(--primary-color)] hover:border-[var(--primary-color)]"
-          href="https://www.instagram.com/digit.x._?igsh=MXI5NDlhMWcxZHJrdw=="
+          href="https://wa.me/918248116779"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
