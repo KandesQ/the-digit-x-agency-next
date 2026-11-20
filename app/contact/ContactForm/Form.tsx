@@ -1,27 +1,77 @@
-type InputFieldData = {
-  id: number;
-  title: string;
-  placeholderText: string;
-};
+"use client";
 
 export default function Form() {
+  const handleSubmition = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+
+    const number = formData.get("client-number")?.toString() ?? "";
+    const clientEmail = formData.get("client-email")?.toString() ?? "";
+    const businessName = formData.get("client-business-name")?.toString() ?? "";
+    const desiredService =
+      formData.get("client-desired-service")?.toString() ?? "";
+    const message = formData.get("client-message")?.toString() ?? "";
+
+    const recipient = "digitx77@gmail.com";
+
+    const subject = `New inquiry from ${businessName}`;
+
+    const emailMessage = `
+    New Form Submission
+
+    Number: ${number}
+    Email: ${clientEmail}
+    Business name: ${businessName}
+    Desired service: ${desiredService}
+
+    Message:
+    ${message}
+    `;
+
+    const emailUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailMessage)}`;
+
+    window.location.assign(emailUrl);
+  };
+
   return (
-    <div className="p-[41px] max-sm:p-[24px] border border-[var(--border-color)] rounded-[24px] col-span-3 max-lg:col-span-1">
-      <h2 className="font-bold text-2xl tracking-[-0.48px] text-white">Send us a message</h2>
-      <span className="mt-[4px] text-sm">We typically reply within a few hours.</span>
+    <form
+      onSubmit={handleSubmition}
+      className="p-[41px] max-sm:p-[24px] border border-[var(--border-color)] rounded-[24px] col-span-3 max-lg:col-span-1"
+    >
+      <h2 className="font-bold text-2xl tracking-[-0.48px] text-white">
+        Send us a message
+      </h2>
+      <span className="mt-[4px] text-sm">
+        We typically reply within a few hours.
+      </span>
 
       <div className="mt-[32px] grid grid-cols-1 gap-[23px]">
         <div className="grid grid-cols-2 gap-[20px] max-sm:grid-cols-1">
-          <InputField title="Your Number" placeholderText="Your Number" />
-          <InputField title="Email Address" placeholderText="you@example.com" />
+          <InputField
+            name="client-number"
+            title="Your Number"
+            type="tel"
+            placeholderText="Your Number"
+          />
+          <InputField
+            name="client-email"
+            title="Email Address"
+            type="email"
+            placeholderText="you@example.com"
+          />
         </div>
 
         <InputField
+          name="client-business-name"
           title="Business Name"
+          type="text"
           placeholderText="Your business name"
         />
         <InputField
+          name="client-desired-service"
           title="Service Interested In"
+          type="text"
           placeholderText="Social media, SEO, branding, ads..."
         />
 
@@ -29,14 +79,17 @@ export default function Form() {
         <div>
           <span className="text-sm font-medium text-white">Message</span>
           <textarea
-            name="message"
+            name="client-message"
             id="message"
             placeholder="Tell us about your business and your goals..."
-            className="mt-[8px] h-[126px] px-[17px] py-[13px] border border-[var(--border-color)] rounded-[16px] text-sm w-full px-[17px] bg-[var(--input-color)]/40 transition-all focus:outline-none focus:border-[var(--primary-color)] focus:ring-[2px] focus:ring-[var(--primary-color)]/30 placeholder:text-[var(--text-color)]"
+            className="mt-[8px] h-[126px] px-[17px] py-[13px] border border-[var(--border-color)] rounded-[16px] text-sm text-white w-full px-[17px] bg-[var(--input-color)]/40 transition-all focus:outline-none focus:border-[var(--primary-color)] focus:ring-[2px] focus:ring-[var(--primary-color)]/30 placeholder:text-[var(--text-color)]"
           />
         </div>
 
-        <button className="py-[14px] text-sm font-semibold text-black rounded-full bg-[var(--primary-color)] flex items-center justify-center gap-[8px]">
+        <button
+          type="submit"
+          className="py-[14px] cursor-pointer text-sm font-semibold text-black rounded-full bg-[var(--primary-color)] flex items-center justify-center gap-[8px] transition-all hover:shadow-[var(--shadow-glow)]"
+        >
           Send message
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -55,21 +108,32 @@ export default function Form() {
           </svg>
         </button>
       </div>
-    </div>
+    </form>
   );
 }
 
-type InputFieldDataProps = Omit<InputFieldData, "id">;
+type InputFieldDataProps = {
+  title: string;
+  placeholderText: string;
+  name: string;
+  type?: string;
+};
 
-function InputField({ title, placeholderText }: InputFieldDataProps) {
+function InputField({
+  title,
+  name,
+  placeholderText,
+  type = "text",
+}: InputFieldDataProps) {
   return (
     <div>
       <span className="text-sm font-medium text-white">{title}</span>
 
       <input
+        required
         id={title}
-        name={title}
-        type="text"
+        name={name}
+        type={type}
         placeholder={placeholderText}
         className="mt-[10px] border border-[var(--border-color)] rounded-[16px] text-sm h-[48px] w-full px-[17px] bg-[var(--input-color)]/40 text-white transition-all focus:outline-none focus:border-[var(--primary-color)] focus:ring-[2px] focus:ring-[var(--primary-color)]/30 placeholder:text-[var(--muted-text-color)]"
       />
