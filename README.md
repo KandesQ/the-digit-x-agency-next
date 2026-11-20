@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The DigitX — Digital Agency Website
 
-## Getting Started
+![The DigitX Website Demo](./public/demo.gif)
 
-First, run the development server:
+> A modern, responsive multi-page website built for **The DigitX**, a digital marketing and website development agency based in Thoothukudi, Tamil Nadu, India.
+
+## 📌 About the Project
+
+The DigitX is a multi-page website developed for a digital agency located at **26A, Emperor St, Matha Koil, Thoothukudi, Tamil Nadu 628001, India**.
+
+The website presents the agency's services, industry expertise, pricing packages, client testimonials, and contact information through a modern and user-friendly interface.
+
+The project focuses on translating a Figma design into a responsive website, providing smooth interactions, clear navigation, and a consistent experience across mobile, tablet, and desktop devices.
+
+## 🛠 Tech Stack
+
+- **Next.js** — React framework for building the website
+- **React** — Component-based UI development
+- **TypeScript** — Type safety and maintainable code
+- **Tailwind CSS** — Utility-first styling
+- **Git & GitHub** — Version control and project management
+- **EmailJS** — Enables sending emails directly from the website's contact form without requiring a backend server.
+
+## ✨ Features
+
+- **Figma to Code** — Implementation of the provided Figma design.
+- **Responsive Design** — Optimized layouts for mobile, tablet, and desktop screens.
+- **Mobile-First Approach** — Designed and developed with mobile devices as the starting point.
+- **Interactive Mobile Navigation** — Responsive mobile menu with toggle functionality and navigation links.
+- **Smooth Animations** — Entrance animations and hover effects for a more engaging user experience.
+- **Multi-Page Architecture** — Separate pages for Home, About, Services, Industries, Packages, Testimonials, and Contact.
+- **Contact Form** — Allows users to send messages directly through the website using EmailJS, without opening their email application.
+- **Reusable Components** — Shared UI components for consistent styling and easier maintenance.
+
+## 🚀 Getting Started
+
+Clone the repository:
+
+```bash
+git clone <your-repository-url>
+```
+
+Navigate to the project directory:
+
+```bash
+cd <project-folder>
+```
+
+Install dependencies:
+
+```bash
+npm ci --no-scripts
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📸 Demo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The animated preview above demonstrates the website layout, responsive sections, and interactive elements.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
