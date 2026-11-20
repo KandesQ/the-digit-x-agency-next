@@ -1,6 +1,12 @@
+import { Metadata } from "next";
 import CardAction from "../common-components/CardAction";
 import Hero from "./Hero";
 import Plans from "./Plans";
+
+
+export const metadata: Metadata = {
+  title: "Packages — Flexible Marketing Plans for Every Stage | The DIGITX",
+};
 
 export default function PackagesPage() {
   return (

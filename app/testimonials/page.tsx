@@ -1,6 +1,13 @@
+import { Metadata } from "next";
 import CardAction from "../common-components/CardAction";
 import Hero from "./Hero";
 import Testimonials from "./Testimonials";
+
+
+export const metadata: Metadata = {
+  title: "Client Testimonials — Real Results from Real Brands | The DIGITX",
+};
+
 
 export default function TestimonialsPage() {
   return (
